@@ -1,0 +1,22 @@
+[
+  {
+    "route": "",
+    "flowLayout": false,
+    "params": {},
+    "title": "Layout",
+    "children": [
+      {
+        "route": "",
+        "flowLayout": false,
+        "params": {},
+        "title": "Index"
+      },
+      {
+        "route": "chat",
+        "flowLayout": false,
+        "params": {},
+        "title": "Chat"
+      }
+    ]
+  }
+]
