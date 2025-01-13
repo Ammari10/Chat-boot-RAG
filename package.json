@@ -29,6 +29,7 @@
     "pdfjs-dist": "^4.10.38",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-markdown": "^9.0.3",
     "react-router-dom": "6.28.0"
   },
   "devDependencies": {
@@ -120,7 +121,7 @@
       "workbox-core": "7.3.0",
       "workbox-precaching": "7.3.0"
     },
-    "hash": "3435b20bebfd5e8f81a8e1db5b4b9f7fdd3c4f9ee31a4696f47c87a141e5d2c6"
+    "hash": "836a61ccbfd62715590d6e703f2837fbe405883d6c376276d368f13bc94a570b"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
@@ -149,6 +150,7 @@
     "@vaadin/vaadin-material-styles": "$@vaadin/vaadin-material-styles",
     "boostrap": "$boostrap",
     "bootstrap": "$bootstrap",
-    "pdfjs-dist": "$pdfjs-dist"
+    "pdfjs-dist": "$pdfjs-dist",
+    "react-markdown": "$react-markdown"
   }
 }

@@ -43,7 +43,7 @@ export default function Chat() {
     async function send() {
         try {
             let response: string;
-            [response] = await Promise.all([ChatAiService.ragChat(question, pdfText)]);
+            [response] = await Promise.all([ChatAiService.ragChat(question,)]);
             setResponse(response);
         } catch (error) {
             console.error("Error fetching response:", error);
