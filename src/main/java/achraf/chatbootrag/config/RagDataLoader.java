@@ -28,7 +28,7 @@ public class RagDataLoader {
     public RagDataLoader(EmbeddingModel embeddingModel) {
         this.embeddingModel = embeddingModel;
     }
-@Bean
+    @Bean
     public SimpleVectorStore simpleVectorStore(EmbeddingModel embeddingModel) {
         SimpleVectorStore vectorStore = new SimpleVectorStore(embeddingModel);
         String fileStore = Path.of("src", "main", "resources", "store")
@@ -37,18 +37,19 @@ public class RagDataLoader {
         File file = new File(fileStore);
         if (!file.exists()) {
             // Initialize PagePdfDocumentReader to read the PDF
-            PagePdfDocumentReader pdfDocumentReader = new PagePdfDocumentReader(pdfResource);
-            List<Document> documents = pdfDocumentReader.read();
+            PagePdfDocumentReader pdfDocumentReader =
+                    new PagePdfDocumentReader(pdfResource);
+            List<Document> documents = pdfDocumentReader.get();
 
             // Use TokenTextSplitter to split the documents
             TextSplitter textSplitter = new TokenTextSplitter();
-            List<Document> chunks = textSplitter.split(documents);
+            List<Document> chunks = textSplitter.split(documents); // enregistre sur le store
 
             // Add the split documents to the vector store
             vectorStore.accept(chunks);
             vectorStore.save(file);
         } else  {
-           vectorStore.load(file);
+            vectorStore.load(file);
         }
 
         return vectorStore; // vectore store utilise  le model embiding pour

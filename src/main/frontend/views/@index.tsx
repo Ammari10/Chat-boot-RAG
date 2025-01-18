@@ -1,6 +1,8 @@
+
+
 import React from 'react';
-// Ensure this path is correct
- // Corrected Bootstrap import
+import "../styles/styles.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Index() {
